@@ -499,17 +499,28 @@ a {
 }
 
 .step-number {
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
     background-color: #27ae60;
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
-    margin: 0 auto 1rem;
+    margin: 0 auto 0.5rem;
+}
+
+/* Index page: show smaller numbers inside each grid cell and disable scale-on-hover */
+body.index .how-it-works-preview .step-number {
+    position: static;
+    left: auto;
+}
+
+body.index .step-item:hover .step-number {
+    transform: none;
+    box-shadow: none;
 }
 
 .step p {
@@ -686,6 +697,28 @@ a {
         transform: translateX(400px);
         opacity: 0;
     }
+}
+
+/* How-it-works page specific: reduce step-number size (keeps layout similar but smaller) */
+body.howitworks .step-number {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+    position: absolute;
+    left: -100px;
+    top: 24px;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+/* Index page: make the preview step-number smaller */
+body.index .how-it-works-preview .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+    margin: 0 auto 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ============================================
