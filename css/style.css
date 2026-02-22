@@ -709,3 +709,908 @@ a {
     color: #7f8c8d;
     margin: 0.5rem 0 0 0;
 }
+
+/* ============================================
+   CUSTOMIZE PAGE STYLES
+   ============================================ */
+
+.customize-section {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.customize-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customize-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.customize-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.meal-display {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #27ae60;
+}
+
+.meal-display label {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.meal-display p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.customize-option {
+    margin-bottom: 2rem;
+}
+
+.customize-option h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+    background-color: #ecf0f1;
+}
+
+.radio-option input[type="radio"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.radio-option label {
+    cursor: pointer;
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.price-display {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.price-display .price-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.price-display .base-price,
+.price-display .final-price {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-display .final-price {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.customize-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.customize-buttons .btn {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* ============================================
+   CART PAGE STYLES
+   ============================================ */
+
+.cart-section {
+    padding: 60px 20px;
+    background-color: white;
+    min-height: 60vh;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cart-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cart-header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+#cartItems {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.cart-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #27ae60;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.item-customization {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+.cart-summary {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.total-label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.total-price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.cart-actions .btn {
+    flex: 1;
+    min-width: 150px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.empty-cart p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+.empty-cart .btn {
+    margin-top: 1rem;
+}
+
+/* ============================================
+   CHECKOUT PAGE STYLES
+   ============================================ */
+
+.checkout-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    min-height: 70vh;
+}
+
+#checkoutContainer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.checkout-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.checkout-header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.checkout-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.form-section,
+.summary-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2,
+.summary-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.8rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+.payment-method {
+    margin: 1.5rem 0;
+}
+
+.payment-method h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+    background-color: #ecf0f1;
+}
+
+.payment-option input[type="radio"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.payment-option label {
+    cursor: pointer;
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+#orderSummary {
+    margin-bottom: 1.5rem;
+}
+
+.order-items {
+    margin-bottom: 1rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #ecf0f1;
+    color: #555;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.order-total {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.order-total strong {
+    font-size: 1.5rem;
+}
+
+.checkout-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.checkout-buttons .btn {
+    flex: 1;
+}
+
+.success-message {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.success-message h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    color: white;
+    padding: 0;
+}
+
+.success-message p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.success-message .btn {
+    background-color: white;
+    color: #27ae60;
+}
+
+/* ============================================
+   HOW IT WORKS PAGE STYLES
+   ============================================ */
+
+.how-it-works-section {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
+}
+
+.page-header.how-works {
+    background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+    color: white;
+    padding: 4rem 20px;
+    text-align: center;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.page-header.how-works h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: white;
+}
+
+.page-header.how-works p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    color: white;
+}
+
+.introduction {
+    max-width: 900px;
+    margin: -3rem auto 4rem;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555;
+    border-top: 4px solid #27ae60;
+}
+
+.steps-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.steps-list::before {
+    content: '';
+    position: absolute;
+    left: 60px;
+    top: 80px;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #27ae60, #ecf0f1);
+}
+
+.step-item {
+    background-color: white;
+    padding: 2.5rem 2.5rem 2.5rem 160px;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #27ae60, #1e8449);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+}
+
+.step-item:hover {
+    box-shadow: 0 12px 28px rgba(39, 174, 96, 0.18);
+    transform: translateY(-4px);
+}
+
+.step-item:hover::before {
+    transform: scaleY(1);
+}
+
+.step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.step-number {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    position: absolute;
+    left: -160px;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+    transition: all 0.3s ease;
+}
+
+.step-item:hover .step-number {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.step-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a5f3a;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.step-description {
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 1rem 0 0 0;
+}
+
+.closing-message {
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 8px 24px rgba(39, 174, 96, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.closing-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.closing-message span {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section {
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   ABOUT PAGE STYLES
+   ============================================ */
+
+.about-section {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: -2rem auto 3rem;
+}
+
+.about-intro {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.about-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.about-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.content-box {
+    background: linear-gradient(135deg, #f9f9f9 0%, #ecf0f1 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #27ae60;
+}
+
+.content-box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.content-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+.vision-section {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.vision-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.vision-section p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    opacity: 0.95;
+}
+
+.values-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.values-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.value-card {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-top: 3px solid #27ae60;
+}
+
+.value-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - PAGE SPECIFIC
+   ============================================ */
+
+@media (max-width: 968px) {
+    .steps-list::before {
+        left: 50px;
+    }
+
+    .step-item {
+        padding: 2rem 2rem 2rem 140px;
+    }
+
+    .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        left: -140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .customize-container {
+        padding: 1.5rem;
+    }
+
+    .customize-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .customize-buttons {
+        flex-direction: column;
+    }
+
+    .customize-buttons .btn {
+        width: 100%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+    }
+
+    .cart-actions .btn {
+        width: 100%;
+    }
+
+    .cart-summary {
+        text-align: center;
+    }
+
+    .checkout-content {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-buttons {
+        flex-direction: column;
+    }
+
+    .checkout-buttons .btn {
+        width: 100%;
+    }
+
+    .page-header.how-works h1 {
+        font-size: 2rem;
+    }
+
+    .page-header.how-works p {
+        font-size: 1rem;
+    }
+
+    .introduction {
+        margin: -2rem auto 3rem;
+        padding: 2rem;
+    }
+
+    .steps-list::before {
+        left: 35px;
+    }
+
+    .step-item {
+        padding: 2rem 2rem 2rem 110px;
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        left: -110px;
+    }
+
+    .step-title {
+        font-size: 1.2rem;
+    }
+
+    .step-description {
+        font-size: 0.95rem;
+    }
+
+    .closing-message {
+        font-size: 1.2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 2.5rem 15px;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header.how-works {
+        padding: 2.5rem 15px;
+    }
+
+    .steps-list::before {
+        left: 25px;
+    }
+
+    .step-item {
+        padding: 1.5rem 1.5rem 1.5rem 90px;
+    }
+
+    .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+        left: -90px;
+    }
+
+    .step-title {
+        font-size: 1rem;
+    }
+
+    .step-description {
+        font-size: 0.9rem;
+    }
+}
