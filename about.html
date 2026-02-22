@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About PrepBite - Smart Meal Kits</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-section {
+            padding: 60px 20px;
+            background-color: white;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 3rem 20px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: -2rem auto 3rem;
+        }
+
+        .about-intro {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .about-intro p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .about-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-box {
+            background: linear-gradient(135deg, #f9f9f9 0%, #ecf0f1 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .content-box h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .content-box p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+            margin: 0;
+        }
+
+        .vision-section {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .vision-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .vision-section p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            opacity: 0.95;
+        }
+
+        .values-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .values-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-top: 3px solid #27ae60;
+        }
+
+        .value-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            margin: 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo-link">
+                    <h1 class="logo">PrepBite</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meals.html">Browse Meals</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="cart.html" class="cart-link">Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>About PrepBite</h1>
+    </div>
+
+    <!-- Main Content -->
+    <section class="about-section">
+        <div class="about-container">
+            <!-- Introduction -->
+            <div class="about-intro">
+                <p>PrepBite is a smart meal kit platform designed to make cooking easier, faster, and more affordable for students and working professionals.</p>
+                <p>We focus on eliminating ingredient waste by delivering exact quantities needed for each recipe. Our goal is to create a sustainable and convenient cooking experience.</p>
+                <p>PrepBite combines affordability, customization, and efficiency to redefine everyday cooking.</p>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <div class="content-box">
+                    <h2>Our Mission</h2>
+                    <p>To revolutionize the way people cook by providing fresh, pre-measured meal kits that save time, money, and reduce food waste.</p>
+                </div>
+                <div class="content-box">
+                    <h2>Our Commitment</h2>
+                    <p>We are committed to quality, sustainability, and customer satisfaction. Every meal kit is prepared with care and attention to detail.</p>
+                </div>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="vision-section">
+                <h2>Our Vision</h2>
+                <p>To make home cooking smarter, waste-free, and accessible to everyone.</p>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <h2>Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h3>🌱 Sustainability</h3>
+                        <p>Zero waste, zero compromise on quality</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>💚 Affordability</h3>
+                        <p>Great meals at student-friendly prices</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>⚡ Convenience</h3>
+                        <p>Cook fresh meals in just 10 minutes</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>🎯 Quality</h3>
+                        <p>Fresh ingredients, every single time</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-section">
+                <p>Join thousands of people experiencing smarter cooking</p>
+                <a href="meals.html" class="btn btn-primary">Browse Our Meals</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>PrepBite</h3>
+                <p>Smart Meal Kits for Smart People</p>
+            </div>
+            <p class="footer-copyright">&copy; 2026 PrepBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

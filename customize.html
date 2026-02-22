@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Meal - PrepBite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .customize-section {
+            padding: 60px 20px;
+            background-color: white;
+        }
+
+        .customize-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .customize-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .customize-header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .meal-display {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #27ae60;
+        }
+
+        .meal-display label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .meal-display p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .customize-option {
+            margin-bottom: 2rem;
+        }
+
+        .customize-option h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .option-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background-color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option:hover {
+            background-color: #ecf0f1;
+        }
+
+        .radio-option input[type="radio"] {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .radio-option label {
+            cursor: pointer;
+            margin: 0;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .price-display {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .price-display .price-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-display .base-price,
+        .price-display .final-price {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-display .final-price {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .customize-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .customize-buttons .btn {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        @media (max-width: 768px) {
+            .customize-container {
+                padding: 1.5rem;
+            }
+
+            .customize-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .customize-buttons {
+                flex-direction: column;
+            }
+
+            .customize-buttons .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo-link">
+                    <h1 class="logo">PrepBite</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meals.html">Browse Meals</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="cart.html" class="cart-link">Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Customize Section -->
+    <section class="customize-section">
+        <div class="customize-container">
+            <div class="customize-header">
+                <h1>Customize Your Meal Kit</h1>
+            </div>
+
+            <!-- Meal Display -->
+            <div class="meal-display">
+                <label>Selected Meal:</label>
+                <p id="selectedMeal">Hakka Noodles Kit</p>
+            </div>
+
+            <!-- Customization Form -->
+            <form id="customizeForm">
+                <!-- Spice Level -->
+                <div class="customize-option">
+                    <h3>Spice Level</h3>
+                    <div class="option-group">
+                        <div class="radio-option">
+                            <input type="radio" id="spiceLow" name="spiceLevel" value="Low">
+                            <label for="spiceLow">Low</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="spiceMedium" name="spiceLevel" value="Medium" checked>
+                            <label for="spiceMedium">Medium</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="spiceHigh" name="spiceLevel" value="High">
+                            <label for="spiceHigh">High</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diet Preference -->
+                <div class="customize-option">
+                    <h3>Diet Preference</h3>
+                    <div class="option-group">
+                        <div class="radio-option">
+                            <input type="radio" id="dietVeg" name="dietPreference" value="Vegetarian" checked>
+                            <label for="dietVeg">Vegetarian</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="dietNonVeg" name="dietPreference" value="Non-Vegetarian">
+                            <label for="dietNonVeg">Non-Vegetarian</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servings -->
+                <div class="customize-option">
+                    <h3>Servings</h3>
+                    <div class="option-group">
+                        <div class="radio-option">
+                            <input type="radio" id="serving1" name="servings" value="1 Person" checked>
+                            <label for="serving1">1 Person</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="serving2" name="servings" value="2 Persons">
+                            <label for="serving2">2 Persons</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="serving3" name="servings" value="3 Persons">
+                            <label for="serving3">3 Persons</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protein Level -->
+                <div class="customize-option">
+                    <h3>Protein Level</h3>
+                    <div class="option-group">
+                        <div class="radio-option">
+                            <input type="radio" id="proteinRegular" name="proteinLevel" value="Regular" checked>
+                            <label for="proteinRegular">Regular</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="proteinHigh" name="proteinLevel" value="High Protein">
+                            <label for="proteinHigh">High Protein (+₹20)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Display -->
+                <div class="price-display">
+                    <div class="price-label">Base Price:</div>
+                    <div class="base-price"><span id="basePriceDisplay">120</span></div>
+                    <div class="price-label" style="margin-top: 1rem;">Your Price:</div>
+                    <div class="final-price"><span id="finalPriceDisplay">120</span></div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="customize-buttons">
+                    <a href="meals.html" class="btn btn-outline">Back to Meals</a>
+                    <button type="button" id="addToCartBtn" class="btn btn-primary">Add to Cart</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>PrepBite</h3>
+                <p>Smart Meal Kits for Smart People</p>
+            </div>
+            <p class="footer-copyright">&copy; 2026 PrepBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
