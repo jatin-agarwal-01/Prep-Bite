@@ -201,32 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateCartDisplay();
-    initializeNavToggles();
 });
-
-function initializeNavToggles() {
-    const toggles = document.querySelectorAll('.nav-toggle');
-    toggles.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const navbar = this.closest('.navbar');
-            if (!navbar) return;
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', String(!expanded));
-            navbar.classList.toggle('nav-open');
-        });
-    });
-
-    // Close nav when a link is clicked (mobile)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function() {
-            const navbar = this.closest('.navbar');
-            if (!navbar) return;
-            navbar.classList.remove('nav-open');
-            const toggle = navbar.querySelector('.nav-toggle');
-            if (toggle) toggle.setAttribute('aria-expanded', 'false');
-        });
-    });
-}
 
 function getCurrentPage() {
     const path = window.location.pathname;
