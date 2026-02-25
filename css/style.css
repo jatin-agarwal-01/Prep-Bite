@@ -300,6 +300,25 @@ a {
     color: #27ae60;
 }
 
+/* Contributors inline links: white by default, green on hover */
+.footer-contributors h4 {
+    color: #fff;
+    margin: 0 0 0.25rem 0;
+    font-size: 0.95rem;
+}
+.footer-contributors p {
+    margin: 0;
+}
+.footer-contributors a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer-contributors a:hover,
+.footer-contributors a:focus {
+    color: #28a745;
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .hero-heading {
         font-size: 2rem;
@@ -648,19 +667,37 @@ body.index .step-item:hover .step-number {
     background-color: #2c3e50;
     color: white;
     padding: 1.2rem 20px;
+}
+
+/* Footer grid: left (contributors), center (copyright), right (tagline) */
+.footer-grid {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-left {
+    flex: 0 0 auto;
     text-align: left;
 }
 
-.footer .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+.footer-center {
+    flex: 1 1 auto;
+    text-align: center;
+    color: #95a5a6;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.footer-right {
+    flex: 0 0 auto;
+    text-align: right;
 }
 
 .footer-content {
     display: flex;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
     gap: 0.6rem;
 }
 
@@ -676,8 +713,9 @@ body.index .step-item:hover .step-number {
 }
 
 .footer-copyright {
-    color: #95a5a6;
-    font-size: 0.8rem;
+    display: flex; /* center moved to .footer-center */
+    justify-content: center;
+    align-items: center;
 }
 
 /* ============================================
