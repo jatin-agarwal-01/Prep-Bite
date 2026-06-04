@@ -1,0 +1,405 @@
+PREPBITE
+Food Delivery Website — Complete Project Document
+
+HTML/CSS → React + Tailwind CSS Migration & Full Build Guide
+
+
+
+1. Project Overview
+
+
+PrepBite is a food delivery website that allows users to browse restaurants, explore menus, add items to a cart, and place food orders. The project started as an HTML/CSS frontend and is being fully migrated to React.js and Tailwind CSS to make it component-based, responsive, and production-ready.
+
+
+1.1 What PrepBite Does
+Users land on a homepage showcasing featured restaurants and popular dishes
+Users can browse all restaurants filtered by cuisine, rating, or delivery time
+Users can open a restaurant page and view its full menu with categories
+Users can add items to a cart, adjust quantities, and see a live order summary
+Users can proceed to a checkout page and review their order before placing it
+Phase 2 (future): user auth, real order placement, payment gateway, order tracking
+
+1.2 Why React + Tailwind?
+
+2. Complete Page & Screen List
+
+
+PrepBite has 7 main pages. Each page is a React component that fetches data from a local JSON file (Phase 1) or Django API (Phase 2).
+
+
+3. Component Architecture
+
+
+Every UI element in PrepBite is a reusable React component. This section defines every component, what it does, what props it takes, and which page it appears on.
+
+3.1 Layout Components
+
+3.2 Homepage Components
+
+3.3 Restaurant Components
+
+3.4 Cart & Checkout Components
+
+3.5 Shared / Utility Components
+
+4. Tech Stack — Full Breakdown
+
+
+4.1 Phase 1 — Frontend Only (React + Tailwind)
+
+4.2 Phase 2 — Backend (Future)
+
+5. Data Structure — Mock JSON (Phase 1)
+
+
+In Phase 1, all data comes from local JSON files in /src/data/. This means no backend is needed to build and demo the full frontend. When Phase 2 backend is ready, simply swap JSON imports for API calls.
+
+5.1 Restaurant Data Structure
+File: /src/data/restaurants.json
+
+
+5.2 Menu Data Structure
+File: /src/data/menus.json
+
+
+6. Project Folder Structure
+
+
+Follow this exact folder structure from day one. It keeps the project clean as it grows.
+
+
+7. Build Roadmap — Step by Step
+
+
+Follow these phases in exact order. Do not jump to Phase 3 before Phase 2 is complete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8. Tailwind Design System
+
+
+Define these design tokens in tailwind.config.js before building any component. Consistent colours and fonts make the whole app look professional.
+
+8.1 Colour Palette
+
+8.2 Typography
+
+9. Quick Project Report — PrepBite
+
+
+Executive Summary for Faculty, Recruiters & GitHub README
+
+Project Identity
+
+Problem & Solution
+
+Key Features
+
+Tech Stack Summary
+
+Project Stats
+
+Skills Demonstrated
+
+
+PrepBite Project Documentation v1.0
+Prepared by Jatin Agarwal — KIET Deemed to be University
+linkedin.com/in/jatin-agarwal-builds | github.com/jatin-agarwal-01/Prep-Bite
+ | 
+Project Name | PrepBite
+Type | Food Delivery Website (Frontend)
+Current Stack | HTML + CSS (basic pages done)
+Target Stack | React.js + Tailwind CSS
+Backend (Phase 2) | Python + Django REST Framework
+Developer | Jatin Agarwal
+Institution | KIET Deemed to be University
+GitHub | github.com/jatin-agarwal-01/Prep-Bite
+LinkedIn | linkedin.com/in/jatin-agarwal-builds
+Current Status | Phase 1 — React Migration in Progress
+
+Vision
+Build a fully functional, visually polished food delivery website frontend in React + Tailwind that looks and feels like a real product — with smooth UI, responsive design, and a clean component architecture that can plug into a Django backend in Phase 2.
+
+Reason | Explanation
+Component reusability | RestaurantCard, MenuItem, CartItem — each built once, used everywhere
+Tailwind utility classes | No separate CSS files — styles applied directly in JSX, faster to build
+React state management | Cart state, filter state, menu toggle — all handled cleanly with useState/useContext
+Industry standard | React is the most in-demand frontend skill for internships and jobs in India
+Portfolio value | A React food delivery site looks significantly more impressive than static HTML/CSS
+
+Page | Route | What It Shows | Key Components
+Homepage | / | Hero banner, featured restaurants, popular dishes, app download CTA | HeroBanner, RestaurantCard, DishCard, CategoryFilter
+Restaurant Listing | /restaurants | All restaurants with search, filter by cuisine/rating/delivery time | SearchBar, FilterBar, RestaurantCard, SortDropdown
+Restaurant Detail | /restaurant/:id | Restaurant info, full menu with categories, add to cart buttons | RestaurantHeader, MenuCategory, MenuItem, CartSidebar
+Cart | /cart | All added items, quantities, item removal, order total, promo code field | CartItem, QuantitySelector, OrderSummary, PromoCode
+Checkout | /checkout | Delivery address form, order summary, payment method selector, place order button | AddressForm, OrderSummary, PaymentSelector, PlaceOrderBtn
+Order Confirmation | /order-success | Order placed confirmation, estimated delivery time, order ID | SuccessAnimation, OrderDetails, TrackOrderBtn
+404 Not Found | * | Friendly error page with back to home button | NotFound component
+
+Component | File | Purpose | Used On
+Navbar | components/layout/Navbar.jsx | Top navigation — logo, search bar, cart icon with count badge, login button | All pages
+Footer | components/layout/Footer.jsx | Links, social icons, app download badges, copyright | All pages
+PageWrapper | components/layout/PageWrapper.jsx | Wraps all pages with consistent padding and max-width | All pages
+CartSidebar | components/layout/CartSidebar.jsx | Slide-in cart panel from right — shows cart items, total, checkout button | Restaurant Detail
+
+Component | File | Purpose
+HeroBanner | components/home/HeroBanner.jsx | Full-width hero with background image, headline text, delivery address input, and CTA button
+CategoryFilter | components/home/CategoryFilter.jsx | Horizontal scrollable row of cuisine category pills — Pizza, Biryani, Burger, etc.
+FeaturedRestaurants | components/home/FeaturedRestaurants.jsx | Section showing top 4-6 restaurants as cards
+PopularDishes | components/home/PopularDishes.jsx | Horizontal scroll of popular dish cards with restaurant name, price, add button
+OfferBanner | components/home/OfferBanner.jsx | Promotional banner showing current offers or discount codes
+AppDownloadCTA | components/home/AppDownloadCTA.jsx | Section with phone mockup image and Play Store / App Store download buttons
+
+Component | File | Purpose
+RestaurantCard | components/restaurant/RestaurantCard.jsx | Card showing restaurant image, name, cuisine, rating stars, delivery time, min order
+RestaurantHeader | components/restaurant/RestaurantHeader.jsx | Top section of restaurant detail page — cover image, name, rating, timing, offers
+MenuCategory | components/restaurant/MenuCategory.jsx | Collapsible section for each menu category — Starters, Mains, Desserts, etc.
+MenuItem | components/restaurant/MenuItem.jsx | Individual dish row — image, name, description, price, veg/non-veg badge, Add button
+SearchBar | components/restaurant/SearchBar.jsx | Search input that filters restaurants or menu items in real-time
+FilterBar | components/restaurant/FilterBar.jsx | Row of filter chips — Pure Veg, Rating 4+, Fast Delivery, Under ₹200
+SortDropdown | components/restaurant/SortDropdown.jsx | Dropdown to sort restaurants by Relevance, Rating, Delivery Time, Cost
+
+Component | File | Purpose
+CartItem | components/cart/CartItem.jsx | Single cart row — dish image, name, quantity +/- buttons, price, remove button
+QuantitySelector | components/cart/QuantitySelector.jsx | Reusable +/- quantity control used in CartItem and MenuItem
+OrderSummary | components/cart/OrderSummary.jsx | Price breakdown — subtotal, delivery fee, GST, discount, grand total
+PromoCode | components/cart/PromoCode.jsx | Input field + Apply button for discount codes
+AddressForm | components/checkout/AddressForm.jsx | Form fields for delivery address — name, phone, address line, city, pin code
+PaymentSelector | components/checkout/PaymentSelector.jsx | Radio buttons for payment method — UPI, Card, Net Banking, Cash on Delivery
+PlaceOrderButton | components/checkout/PlaceOrderButton.jsx | Final CTA button — shows total amount, triggers order placement
+
+Component | File | Purpose
+StarRating | components/shared/StarRating.jsx | Reusable star rating display — takes rating prop (e.g. 4.2), renders coloured stars
+VegBadge | components/shared/VegBadge.jsx | Green square (veg) or red square (non-veg) indicator — used on every menu item
+LoadingSpinner | components/shared/LoadingSpinner.jsx | Centered spinner shown while data loads
+EmptyState | components/shared/EmptyState.jsx | Illustrated empty state for empty cart, no search results, etc.
+Toast | components/shared/Toast.jsx | Bottom notification — 'Item added to cart', 'Promo applied', etc.
+Badge | components/shared/Badge.jsx | Reusable pill badge — used for cuisine tags, offers, ratings
+
+Technology | Version | Purpose | Install Command
+React.js | 18+ | Core UI framework — component-based architecture | npx create-react-app prepbite OR npm create vite@latest
+Tailwind CSS | 3+ | Utility-first CSS — all styling done with classes in JSX | npm install -D tailwindcss postcss autoprefixer
+React Router DOM | 6+ | Client-side routing between pages | npm install react-router-dom
+React Context API | Built-in | Global cart state management — no Redux needed for Phase 1 | Built into React — no install
+useState / useEffect | Built-in | Local component state and data fetching | Built into React — no install
+Vite (recommended) | 5+ | Fast dev server and build tool — faster than Create React App | npm create vite@latest prepbite -- --template react
+React Icons | 5+ | Icon library — cart, star, location, filter icons | npm install react-icons
+Local JSON files | — | Mock data for restaurants and menus in Phase 1 — no backend needed | Create /src/data/ folder
+
+Technology | Purpose
+Python + Django | Backend framework for REST API
+Django REST Framework | Build API endpoints for restaurants, menus, orders, users
+PostgreSQL | Database for restaurants, menus, users, orders
+JWT Auth | User login and registration
+Razorpay / Stripe API | Payment gateway integration
+AWS EC2 | Host Django backend
+AWS S3 | Store restaurant images and food photos
+
+Field | Type | Example Value | Used In
+id | string | "rest_001" | RestaurantCard, RestaurantDetail route
+name | string | "Spice Garden" | RestaurantCard, RestaurantHeader
+cuisine | array of strings | ["Indian", "Biryani"] | RestaurantCard, FilterBar
+rating | number | 4.3 | StarRating component
+deliveryTime | string | "30-40 mins" | RestaurantCard
+minOrder | number | 149 | RestaurantCard, OrderSummary
+deliveryFee | number | 29 | OrderSummary
+image | string (URL) | "/images/spice-garden.jpg" | RestaurantCard, RestaurantHeader
+isVeg | boolean | false | VegBadge, FilterBar
+offers | array of strings | ["50% off up to ₹100"] | RestaurantCard, RestaurantHeader
+isOpen | boolean | true | RestaurantCard overlay
+
+Field | Type | Example Value | Used In
+restaurantId | string | "rest_001" | Link menu to restaurant
+categories | array | [{name, items}] | MenuCategory component
+category.name | string | "Starters" | MenuCategory header
+item.id | string | "item_001" | CartItem, MenuItem
+item.name | string | "Paneer Tikka" | MenuItem, CartItem
+item.description | string | "Marinated cottage cheese..." | MenuItem
+item.price | number | 249 | MenuItem, CartItem, OrderSummary
+item.image | string (URL) | "/images/paneer-tikka.jpg" | MenuItem
+item.isVeg | boolean | true | VegBadge
+item.isBestseller | boolean | true | Bestseller badge on MenuItem
+item.rating | number | 4.1 | MenuItem rating display
+
+Folder / File | Purpose
+src/ | All source code lives here
+src/main.jsx | App entry point — renders <App /> into DOM
+src/App.jsx | Root component — sets up React Router routes
+src/index.css | Tailwind directives (@tailwind base/components/utilities)
+src/pages/ | One file per page — HomePage, RestaurantsPage, RestaurantDetailPage, CartPage, CheckoutPage
+src/components/layout/ | Navbar, Footer, PageWrapper, CartSidebar
+src/components/home/ | HeroBanner, CategoryFilter, FeaturedRestaurants, PopularDishes, OfferBanner
+src/components/restaurant/ | RestaurantCard, RestaurantHeader, MenuCategory, MenuItem, SearchBar, FilterBar
+src/components/cart/ | CartItem, QuantitySelector, OrderSummary, PromoCode
+src/components/checkout/ | AddressForm, PaymentSelector, PlaceOrderButton
+src/components/shared/ | StarRating, VegBadge, LoadingSpinner, EmptyState, Toast, Badge
+src/context/ | CartContext.jsx — global cart state with useContext + useReducer
+src/data/ | restaurants.json, menus.json — mock data for Phase 1
+src/hooks/ | useCart.js, useRestaurants.js — custom hooks for reusable logic
+src/utils/ | formatPrice.js, calculateTotal.js — helper functions
+src/assets/ | Images, icons, logo files
+tailwind.config.js | Tailwind configuration — custom colours, fonts
+vite.config.js | Vite build configuration
+
+Phase 0 — Project Setup
+
+Task | Tool | Output
+Create Vite + React project | npm create vite@latest prepbite -- --template react | React project running on localhost:5173
+Install Tailwind CSS | npm install -D tailwindcss postcss autoprefixer + npx tailwindcss init | Tailwind working — test with a bg-blue-500 class
+Install React Router | npm install react-router-dom | Router configured in App.jsx
+Install React Icons | npm install react-icons | Icons importable from react-icons/fi etc.
+Create folder structure | Manually create all folders from Section 6 | Clean folder structure ready
+Create mock JSON data | Write restaurants.json and menus.json in /src/data/ | 5-6 restaurants, 3-4 menu categories each
+Push to GitHub | git init, git add, git commit, git push | GitHub repo live with initial commit
+
+Phase 0 Milestone
+React app running on localhost with Tailwind working, router set up, folder structure created, mock data written, and code on GitHub.
+
+Phase 1 — Layout + Homepage
+
+Task | Component to Build | Output
+Build Navbar | Navbar.jsx | Logo, nav links, cart icon with badge, responsive hamburger menu
+Build Footer | Footer.jsx | Links, social icons, copyright
+Build HeroBanner | HeroBanner.jsx | Full-width hero with headline, address input, CTA button
+Build CategoryFilter | CategoryFilter.jsx | Horizontal scroll row of cuisine category pills
+Build RestaurantCard | RestaurantCard.jsx | Card with image, name, rating, delivery time, cuisine tags
+Build FeaturedRestaurants | FeaturedRestaurants.jsx | Grid of RestaurantCards using restaurants.json data
+Build PopularDishes | PopularDishes.jsx | Horizontal scroll of dish cards
+Assemble Homepage | pages/HomePage.jsx | All components assembled into complete homepage
+
+Phase 1 Milestone
+Complete homepage visible in browser — hero banner, category pills, restaurant cards grid, popular dishes scroll. Looks like a real food delivery app.
+
+Phase 2 — Restaurant Listing + Detail Pages
+
+Task | Component to Build | Output
+Build SearchBar | SearchBar.jsx | Real-time search that filters restaurant list as user types
+Build FilterBar | FilterBar.jsx | Filter chips — Pure Veg, Rating 4+, Fast Delivery, Under ₹200
+Build SortDropdown | SortDropdown.jsx | Sort by Relevance, Rating, Delivery Time, Cost
+Build Restaurant Listing Page | pages/RestaurantsPage.jsx | Full searchable, filterable restaurant grid
+Build RestaurantHeader | RestaurantHeader.jsx | Cover image, name, rating, timing, offers banner
+Build MenuCategory | MenuCategory.jsx | Collapsible menu sections with category name and item count
+Build MenuItem | MenuItem.jsx | Dish row with image, name, price, veg badge, Add button
+Build CartSidebar | CartSidebar.jsx | Slide-in cart panel — updates live as items are added
+Set up CartContext | context/CartContext.jsx | Global cart state — add, remove, update quantity, clear cart
+Assemble Restaurant Detail Page | pages/RestaurantDetailPage.jsx | Full menu page with working Add to Cart
+
+Phase 2 Milestone
+User can browse restaurants, filter and search, open a restaurant, browse full menu, and add items to cart. Cart sidebar updates live with total.
+
+Phase 3 — Cart + Checkout Pages
+
+Task | Component to Build | Output
+Build CartItem | CartItem.jsx | Cart row with quantity +/- and remove button
+Build QuantitySelector | QuantitySelector.jsx | Reusable +/- control used in cart and menu
+Build OrderSummary | OrderSummary.jsx | Price breakdown — subtotal, delivery, GST, total
+Build PromoCode | PromoCode.jsx | Code input + Apply button — hardcode 1-2 valid codes
+Assemble Cart Page | pages/CartPage.jsx | Full cart with all items, order summary, proceed to checkout
+Build AddressForm | AddressForm.jsx | Delivery address form with validation
+Build PaymentSelector | PaymentSelector.jsx | UPI, Card, Net Banking, Cash on Delivery options
+Build PlaceOrderButton | PlaceOrderButton.jsx | Final CTA with total — navigates to order success
+Build Order Success Page | pages/OrderSuccessPage.jsx | Confirmation screen with order ID and estimated time
+Assemble Checkout Page | pages/CheckoutPage.jsx | Address + payment + order summary assembled
+
+Phase 3 Milestone
+Complete end-to-end user flow works: browse → add to cart → checkout → order placed confirmation. Full frontend of PrepBite is complete.
+
+Phase 4 — Polish + Responsive + Deploy
+
+Task | Tool / Approach | Output
+Mobile responsiveness | Tailwind responsive prefixes (sm:, md:, lg:) | App looks good on mobile, tablet, and desktop
+Loading states | LoadingSpinner component + Tailwind animate-pulse skeleton | No blank screens while data loads
+Empty states | EmptyState component | Friendly message for empty cart, no search results
+Toast notifications | Toast component + useState | 'Item added to cart' notification on every add
+Smooth animations | Tailwind transition + transform classes | Cart sidebar slides in, cards hover lift, buttons scale on click
+404 page | NotFound.jsx | Friendly error page for wrong URLs
+Deploy to Vercel | vercel.com — connect GitHub repo, auto-deploy | PrepBite live at prepbite.vercel.app
+Add live link to GitHub README | Markdown in README.md | Recruiters can click and see live site instantly
+
+Phase 4 Milestone — PrepBite Phase 1 Complete
+PrepBite is live on Vercel. Mobile responsive. Smooth animations. Full user flow working. GitHub README has live link and screenshots. Add to LinkedIn Featured section immediately.
+
+Colour Name | Hex Code | Used For
+primary | #FF5A00 (orange) | CTA buttons, Add to cart, highlights — the PrepBite brand colour
+primary-dark | #E04E00 | Button hover state
+secondary | #1C1C1C (dark) | Navbar, headings, important text
+accent | #FFF7ED (light orange) | Background tints, card highlights
+success | #22C55E (green) | Veg badge, order success, positive states
+danger | #EF4444 (red) | Non-veg badge, error states, remove buttons
+text-primary | #1C1C1C | Main body text
+text-secondary | #6B7280 (gray) | Subtitles, meta info, delivery time
+bg-light | #F9FAFB | Page background
+border | #E5E7EB | Card borders, dividers, input borders
+
+Element | Tailwind Classes | Used For
+Page heading | text-3xl font-bold text-secondary | Page titles like 'All Restaurants'
+Section heading | text-xl font-semibold text-secondary | Section titles like 'Featured Restaurants'
+Card title | text-base font-semibold text-secondary | Restaurant name, dish name
+Body text | text-sm text-text-primary | Descriptions, menu item details
+Meta text | text-xs text-text-secondary | Delivery time, ratings, cuisine tags
+Price | text-base font-bold text-secondary | Item price, order total
+CTA button text | text-sm font-semibold text-white | Add to cart, Place order buttons
+
+Field | Details
+Project Name | PrepBite — Food Delivery Website
+Type | Frontend Web Application
+Current Stack | HTML + CSS (basic structure complete)
+Migration Target | React.js 18 + Tailwind CSS 3
+Phase 2 (Future) | Python + Django REST API + PostgreSQL
+Developer | Jatin Agarwal — KIET Deemed to be University
+GitHub | github.com/jatin-agarwal-01/Prep-Bite
+Live Demo (after deploy) | prepbite.vercel.app
+Status | Phase 1 — React Migration In Progress
+
+ | 
+Problem | Students and working professionals in India need a fast, intuitive food ordering experience — but most food delivery UI projects built by CS students are static HTML pages with no real interactivity or component architecture.
+Solution | PrepBite is a fully interactive React + Tailwind food delivery frontend with real cart state management, search and filter, and a complete checkout flow — built to demonstrate production-grade frontend development skills.
+
+Feature | Description
+Restaurant Discovery | Browse all restaurants with search, filter by cuisine/rating/delivery time, sort options
+Menu Browsing | Full restaurant menu with categories, veg/non-veg badges, bestseller tags, prices
+Live Cart | Add/remove items, quantity controls, live total calculation, promo code support
+Checkout Flow | Address form, payment method selection, order summary, order confirmation
+Responsive Design | Fully mobile-responsive — works on all screen sizes
+Component Architecture | 30+ reusable React components — clean, maintainable, scalable codebase
+
+Layer | Technology
+Framework | React.js 18 with Vite
+Styling | Tailwind CSS 3
+Routing | React Router DOM v6
+State Management | React Context API + useReducer
+Icons | React Icons
+Data (Phase 1) | Local JSON mock data
+Deployment | Vercel (free tier)
+Phase 2 Backend | Python + Django + PostgreSQL + AWS
+
+Metric | Value
+Total Pages | 7 pages
+Total Components | 30+ React components
+Data Files | 2 JSON files (restaurants + menus)
+Build Phases | 4 (Setup, Homepage, Listing/Detail, Cart/Checkout)
+Estimated Timeline | 3–4 weeks (Phase 1 frontend complete)
+Skills Demonstrated | React, Tailwind, Component Architecture, State Management, Responsive Design, Git
+
+Skill | How It Is Used
+React.js | Component-based architecture, hooks (useState, useEffect, useContext, useReducer)
+Tailwind CSS | Utility-first styling, responsive design, custom design system
+React Router | Client-side navigation between 7 pages
+State Management | Global cart state with Context API — shared across all pages
+Component Design | 30+ reusable, prop-driven components with clean separation of concerns
+Responsive Design | Mobile-first layout — works on phone, tablet, and desktop
+Git + GitHub | Version control, branching, commits, GitHub README with live link
+Frontend Architecture | Organised folder structure, custom hooks, utility functions, JSON data layer
